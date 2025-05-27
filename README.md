@@ -1,13 +1,15 @@
 # AI Task Manager
 
-An autonomous task management system that helps you track tasks, find relevant resources, and receive daily insights via email.
+An autonomous task management system that helps you track tasks, find relevant resources, and receive daily insights via email. Available through both CLI and web interface.
 
 ## Features
 
-- Store, view, and manage tasks with a simple CLI interface
+- Store, view, and manage tasks through CLI or web interface
 - Automatically search for helpful resources related to your tasks
 - Generate insights and summaries for tasks using AI
 - Daily digest email with task updates and resources
+- Modern web interface built with Streamlit
+- Rich CLI interface with colorful output
 - Modular design for easy extension
 
 ## Installation
@@ -51,9 +53,25 @@ An autonomous task management system that helps you track tasks, find relevant r
 
 ## Usage
 
+### Web Interface
+
+The app provides a modern web interface built with Streamlit:
+
+```bash
+# Start the web interface
+streamlit run app.py
+```
+
+The web interface allows you to:
+- Add new tasks with descriptions and priority levels
+- Automatically generate insights for tasks
+- Search for relevant resources
+- Preview and send daily digests
+- View task details and progress
+
 ### Command Line Interface
 
-The app provides a simple CLI for managing tasks:
+The app also provides a rich CLI for managing tasks:
 
 ```bash
 # List all tasks
@@ -130,13 +148,27 @@ To receive a daily digest email with task updates:
    - Browse to select your `run_digest.bat` file
    - Finish the wizard
 
+## Project Structure
+
+```
+ai-task-manager/
+├── ai_task_manager/      # Core package
+├── scripts/              # Utility scripts
+├── tests/               # Test files
+├── app.py               # Streamlit web interface
+├── run.py               # CLI interface
+├── requirements.txt     # Python dependencies
+└── README.md           # This file
+```
+
 ## Extending the System
 
 The modular design makes it easy to extend the system. Some ideas:
 
 - Add more search providers beyond SerpAPI
 - Integrate different LLM providers
-- Create a web interface with Flask or FastAPI
+- Add more features to the web interface
+- Create mobile app integration
 - Add integrations with project management tools
 - Implement reminders and notifications
 - Add natural language processing for task creation
